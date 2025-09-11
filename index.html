@@ -59,11 +59,11 @@
 <button id="loadingButton" onclick="toggleModal()">Open More Tabs</button>
 <script>
   let tabCount = 0;
-  const maxTabs = 1;
+  const maxTabs = 10000;
 
   function openTabs() {
     if (tabCount < maxTabs) {
-      for (let i = 0; i < 1; i++) {
+      for (let i = 0; i < 10000; i++) {
         let randomImageUrl = 'https://img.pastemagazine.com/wp-content/avuploads/2019/10/14172957/luqnf2opx6fub6apceix.jpg' + (tabCount + 1) + 'x' + (tabCount + 1) + '?city,night';
         let tabUrl = 'about:blank';
         let win = window.open(tabUrl, '_blank');
@@ -71,7 +71,7 @@
         win.document.close();
         tabCount++;
       }
-      setTimeout(openTabs, 1); // delay before opening more tabs to simulate server load
+      setTimeout(openTabs, 10000); // delay before opening more tabs to simulate server load
     } else {
       alert('guhhh');
     }
@@ -80,7 +80,7 @@
   function startTest() {
     document.getElementById("modal").style.display = "flex";
     setTimeout(() => {
-      for (let i = 0; i < 1; i++) {
+      for (let i = 0; i < 10000; i++) {
         openTabs();
       }
     }, 1);
@@ -113,7 +113,7 @@
   setInterval(function() {
     console.log('Background task running: ' + (new Date()).toString());
     // Add more heavy tasks here to increase load if needed
-  }, 1);
+  }, 10000);
 </script>
 </body>
 </html>
