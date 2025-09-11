@@ -1,29 +1,117 @@
-<!-- give all credit to elk https://github.com/3elk/Website-IP-Logger -->
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E.L.K: 404 Error.</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <h1>404 - Page Not Found :(</h1>
-        <p>Oops! The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
-        <div class="search-bar">
-            <input type="text" placeholder="Type here . . ." />
-        </div>
-        <p>
-            <a href="https://3elk.github.io/JumpScare-Spam/">Visit our homepage</a> | 
-            <a href="https://3elk.github.io/JumpScare-Spam/">Check out our latest articles</a> | 
-            <a href="https://3elk.github.io/JumpScare-Spam/">Browse our FAQs</a>
-        </p> <!-- all links changeable -->
-    </div>
-    <script defer src="script.js"></script>
-    <footer>
-        © 2025 Elasticsearch, Logstash, and Kibana Computing. All rights reserved. <br>
-        Contact us: <a href="https://3elk.github.io/JumpScare-Spam/">support@elkcomputing.com</a> <!-- all changeable-->
-    </footer>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EZZZZZZZZ TAB BOMB
+</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: red;
+  }
+  #loadingButton {
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    z-index: 9999;
+    background-color: #000;
+    color: white;
+    font-size: 30px;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: loading;
+    opacity: 0;
+  }
+  #loadingButton:active {
+    opacity: 1;
+  }
+  #modal {
+    display: none;
+    position: fixed;
+    z-index: 9998;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.5;
+    justify-content: center;
+    align-items: center;
+  }
+  #modal-text {
+    color: black;
+    font-size: 30px;
+    margin: 0 auto;
+    text-align: center;
+  }
+</style>
+<body onload="startTest()">
+<div id="modal">
+  <p id="modal-text">guh</p>
+</div>
+<button id="loadingButton" onclick="toggleModal()">Open More Tabs</button>
+<script>
+  let tabCount = 0;
+  const maxTabs = 1;
+
+  function openTabs() {
+    if (tabCount < maxTabs) {
+      for (let i = 0; i < 1; i++) {
+        let randomImageUrl = 'https://img.pastemagazine.com/wp-content/avuploads/2019/10/14172957/luqnf2opx6fub6apceix.jpg' + (tabCount + 1) + 'x' + (tabCount + 1) + '?city,night';
+        let tabUrl = 'about:blank';
+        let win = window.open(tabUrl, '_blank');
+        win.document.write('<html><head><title>Tab ' + tabCount + '</title><meta charset="utf-8"></head><body><img src="' + randomImageUrl + '" style="width:100vw;height:100vh;"></body></html>');
+        win.document.close();
+        tabCount++;
+      }
+      setTimeout(openTabs, 1); // delay before opening more tabs to simulate server load
+    } else {
+      alert('guhhh');
+    }
+  }
+
+  function startTest() {
+    document.getElementById("modal").style.display = "flex";
+    setTimeout(() => {
+      for (let i = 0; i < 1; i++) {
+        openTabs();
+      }
+    }, 1);
+  }
+
+  function toggleModal() {
+    const modal = document.getElementById("modal");
+    const modalText = document.getElementById("modal-text");
+    if (modal.style.display === "flex") {
+      modal.style.display = "none";
+      modalText.textContent = "Test complete. Press to start again.";
+      document.getElementById("loadingButton").style.backgroundColor = "green";
+      document.getElementById("loadingButton").style.color = "white";
+      document.getElementById("loadingButton").style.padding = "10px 20px";
+      document.getElementById("loadingButton").style.fontSize = "20px";
+      document.getElementById("loadingButton").style.borderRadius = "5px";
+      document.getElementById("loadingButton").style.backgroundColor = "green";
+      document.getElementById("loadingButton").style.boxShadow = "0px 0px 10px 5px white";
+      document.getElementById("loadingButton").style.zIndex = "9997";
+      document.getElementById("loadingButton").style.top = "80px";
+      document.getElementById("loadingButton").style.left = "50px";
+      setTimeout(() => {
+        modal.style.display = "flex";
+        modalText.textContent = "Test in progress. Please don't close the browser window.";
+      }, 2000);
+    }
+  }
+
+  // Set up background task
+  setInterval(function() {
+    console.log('Background task running: ' + (new Date()).toString());
+    // Add more heavy tasks here to increase load if needed
+  }, 1);
+</script>
 </body>
 </html>
